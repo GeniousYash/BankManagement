@@ -32,8 +32,6 @@ function Std(name, roll_no, className, section, marks) {
 
     this.reportCard = function () {
         console.log(" ");
-        console.log(" ");
-        console.log(" ");
         console.log("+--------------------+");
         console.log("|     REPORT CARD    |");
         console.log("+--------------------+");
@@ -53,7 +51,10 @@ function Std(name, roll_no, className, section, marks) {
         }, 0);
         const percentage = (totalMarks / (Object.keys(this.marks).length * 100)) * 100;
         console.log(`| Percentage - ${percentage.toFixed(1)}% |`)
-        console.log("+--------------------+");;
+        console.log("+--------------------+");
+        console.log("");
+        console.log("");
+        console.log("");
     };
 }
 
@@ -65,6 +66,17 @@ const child1 = new Std("Huzaifa", 16, "X", "A", {
     hindi: 67
 });
 
+const child2 = new Std("Yash", 26, "XII", "A", {
+    science: 92,
+    maths: 87,
+    Chemistry: 89,
+    Physics: 93,
+    English: 87
+});
+
 child1.top3Sub();
 child1.reportCard();
+
+child2.top3Sub();
+child2.reportCard();
 </script>
